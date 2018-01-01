@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="menu" animation="{{animationM}}"  style="right:{{gogoright}}%">
+  <scroll-view scroll-y="true" class="menu-scroll">
+    <view class="menu-view" wx:for="{{cityMenus}}" wx:key="unique">
+      <image wx:if="{{item.icon ==0}}" class="menu-icon" src="../../images/position.png"></image>
+      <image wx:elif="{{item.icon == 1}}" class="menu-icon" src="../../images/positiongrey.png"></image>
+      <text class="menulabel" bindtap="menuTab" id="{{index}}">{{item.name}}</text>
+    </view>
+    <view style="clear:both"></view>
+  </scroll-view>
+  <view class="menu-view" hidden="true">
+    <image class="menu-icon" src="../../images/user.png"></image>
+    <text class="menulabel">تۈزگۈچىدىن</text>
+  </view>
+  <view class="menu-view" hidden="true">
+    <image class="menu-icon" src="../../images/heard.png"></image>
+    <text class="menulabel" bindtap="donateTab">قوللاش</text>
+  </view>
+  <image class="flower" src="../../images/timg.jpg"></image>
+</view>
+<view class="container" animation="{{animationW}}" style="width:{{pagesize}}%;height:{{pagesize}}vh;left:{{gogoleft}}%;top:{{pagetop}}vh">
+  <view class="header">
+    <image class="header-icon-right" bindtap="setMenuNatural" src="../../images/menu.png"></image>
+    <text class="header-text-center">{{theWeather.currentCity}}</text>
+    <image class="header-icon-left" bindtap="setAdd" src="../../images/plus.png"></image>
+  </view>
+  <scroll-view scroll-y="true" class="scroll-box" enable-back-to-top="true">
+    <view class="number-box">
+       <text>{{theWeather.date}}°</text>
+       <image class="big-icon" src="{{theWeather.weatherIcon}}.png"></image>
+       <view style="clear:both"></view>
+    </view>
+    <view class="status-box">
+       <text>{{theWeather.weatherDesc}}</text>
+       <view style="clear:both"></view>
+    </view>
+    <view class="time-box">
+       <text>{{today}}</text>
+       <view style="clear:both"></view>
+    </view>
+    <view class="tree-box">
+      <view class="one-box">
+        <image class="tree-icon" src="../../images/PM.png" style="padding:0rpx"></image>
+        <text>{{theWeather.pm25}}</text>
+      </view>
+      <view class="one-box center-box">
+        <image class="tree-icon" src="../../images/termo.png"></image>
+        <text>{{theWeather.temperature}}</text>
+      </view>
+      <view class="one-box">
+        <image class="tree-icon" src="../../images/wind.png"></image>
+        <text class="right-text">{{theWeather.wind}}</text>
+      </view>
+      <view style="clear:both"></view>
+    </view>
+    <view class="day-box" wx:for="{{theWeather.fullData.weather_data}}" wx:key="unique">
+      <text wx:if="{{index ==0}}" class="daylabel"> 今天  {{item.date}}</text>
+      <text wx:else class="daylabel">{{item.date}}</text>
+      <image class="dayicon" src="{{item.weather}}.png"></image>
+      <text class="dayvalue">{{item.temperature}}</text>
+      
+    </view>
+    <view class="aqi-box">
+      <text class="paneltitle">空气质量</text>
+      <text class="aqitext">空气质量值 {{theWeather.pm25}} </text>
+      <text class="aqitext">{{theWeather.pmpm}}</text>
+      <image src="../../images/good.png" wx:if="{{theWeather.pm25 <= 75}}"></image>
+      <image src="../../images/normal.png" wx:elif="{{theWeather.pm25 > 75 && theWeather.pm25 <= 150}}"></image>
+      <image src="../../images/bad.png" wx:elif="{{theWeather.pm25 > 150}}"></image>
+      <view style="clear:both"></view>
+    </view>
+    <view class="advice-box">
+      <text class="paneltitle">建议</text>
+      <view class="adviceview" wx:for="{{theWeather.fullData.index}}" wx:key="unique">
+        <image class="adviceicon" id="{{index}}" wx:if="{{item.title=='穿衣'}}" src="../../images/cloth.png"></image>
+        <image class="adviceicon" id="{{index}}" wx:elif="{{item.title=='洗车'}}" src="../../images/car.png"></image>
+        <image class="adviceicon" id="{{index}}" wx:elif="{{item.title=='感冒'}}" src="../../images/ill.png"></image>
+        <image class="adviceicon" id="{{index}}" wx:elif="{{item.title=='运动'}}" src="../../images/sport.png"></image>
+        <image class="adviceicon" id="{{index}}" wx:elif="{{item.title=='紫外线强度'}}" src="../../images/ultra.png"></image>
+        <text class="advicetextxl" wx:if="{{item.title=='紫外线强度' && item.zs.length > 50}}">{{item.zs}}</text>
+        <text class="advicetext" wx:else>{{item.zs}}</text>
+      </view>
+      <view style="clear:both"></view>
+    </view>
+    <view class="holiday-box" hidden="true">
+      <view style="clear:both"></view>
+    </view>
+  </scroll-view>
+</view>
+<image class="wallpaper" animation="{{animationW}}" style="width:{{pagesize}}%;height:{{pagesize}}vh;left:{{gogoleft}}%;top:{{pagetop}}vh" src="{{wall}}.jpg"></image>

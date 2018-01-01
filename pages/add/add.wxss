@@ -1,0 +1,55 @@
+/* pages/add/add.wxss */
+page{
+    background-color: #f5f5f5;
+}
+.search-box{
+  position: relative;
+  width:100%;
+  height:100rpx;
+  padding: 12rpx 16rpx;
+  background-color:#0099FF;
+  box-sizing: border-box;
+  clear: both;
+}
+.search-box input{
+    font-family: 'UKIJ Esliye';
+    border: 1rpx solid #cdcdcd;
+    background-color: #ffffff;
+    background-position: 14rpx 14rpx;
+    background-repeat: no-repeat;
+    background-size: 48rpx 48rpx;
+    height: 76rpx;
+    padding:0 64rpx;
+    box-sizing: border-box;
+    color:#666666;
+    border-radius: 12rpx;
+}
+.place-box{
+  position: relative;
+  width:100%;
+  margin-top:6rpx;
+  background-color:white;
+  box-sizing: border-box;
+  clear: both
+}
+.place-box text{
+    display: block;
+    width:33%;
+    text-align: center;
+    line-height: 72rpx;
+    color:blue;
+    float: right;
+    font-size: 30rpx;
+    font-family: 'UKIJ Esliye';
+}
+.paneltitle{
+  display: block;
+  width: 100%;
+  color: #999999;
+  font-size:32rpx;
+  margin-top:10rpx;
+  line-height: 72rpx;
+  padding-left:16rpx;
+  font-family: 'UKIJ Esliye';
+  box-sizing: border-box;
+}

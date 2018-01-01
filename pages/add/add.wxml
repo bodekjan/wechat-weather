@@ -1,0 +1,14 @@
+<!--pages/add/add.wxml-->
+<view class="search-box" hidden="true">
+    <input placeholder=""/>
+</view>
+<!--<text class="paneltitle">ھازىرقى ئورنىڭىز</text>
+<view class="place-box">
+    <text>نەنجىڭ شەھىرى</text>
+    <view style="clear:both"></view>
+</view>-->
+<text class="paneltitle">城市列表</text>
+<view class="place-box">
+    <text wx:for="{{chinaCitys}}" bindtap="chinaTaped" id="{{index}}" wx:key="unique">{{item.cityzh}}</text>
+    <view style="clear:both"></view>
+</view>

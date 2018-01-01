@@ -1,0 +1,372 @@
+/**index.wxss**/
+page{
+  background-color: #fff;
+}
+.menu {
+  position: fixed;
+  height: 100vh;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  box-sizing: border-box;
+}
+.menu .flower{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 20vh
+}
+.menu-view{
+  width: 100%;
+  margin-top:28rpx;
+  min-height: 64rpx;
+}
+.menu-scroll{
+  width: 100%;
+  height: 50vh;
+  margin-top:4vh;
+}
+.menu-icon{
+  float: right;
+  margin: 7rpx 12rpx;
+  width:58rpx;
+  height: 58rpx;
+}
+.menulabel{
+  font-family: 'UKIJ Esliye' !important;
+  line-height: 48rpx;
+  margin: 12rpx;
+  font-size: 36rpx;
+  float: right;
+  color: #666
+}
+.container {
+  position: fixed;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 999;
+  overflow: hidden;
+  box-shadow: 10rpx 10rpx 5rpx #999999
+} 
+.wallpaper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9
+}
+.header {
+  height: 100rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 9999
+}
+.header-text-center {
+  color:white;
+  font-size:40rpx;
+  line-height: 100rpx; 
+  text-shadow: 2rpx 2rpx 2rpx #666;
+} 
+.header-icon-left {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100rpx; 
+  height: 100rpx;
+  padding:22rpx;
+  box-sizing: border-box;
+} 
+.header-icon-right {
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 100rpx; 
+  height: 100rpx;
+  padding:18rpx;
+  box-sizing: border-box;
+}
+.scroll-box{
+  position: absolute;
+  top:0px;
+  width:100%;
+  height: 100vh;
+  padding-top:100rpx;
+  box-sizing: border-box;
+}
+.number-box{
+  position: relative;
+  height: 148rpx;
+  width:100%;
+  margin:36rpx auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  clear: both
+}
+.number-box text{
+  color:white;
+  height: 148rpx;
+  float: right;
+  width:50%;
+  font-size:128rpx;
+  line-height: 148rpx;
+  font-weight: bold;
+  text-shadow: 2rpx 2rpx 2rpx #666;
+}
+.number-box image{
+  float: right;
+  height: 148rpx;
+  width: 148rpx;
+}
+.status-box{
+  height: 48rpx;
+  width:100%;
+  margin:36rpx auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  clear: both
+}
+.status-box text{
+  font-family: 'UKIJ Esliye';
+  display: block;
+  color:white;
+  height: 48rpx;
+  width:100%;
+  text-align: center;
+  font-size:42rpx;
+  line-height: 48rpx;
+  text-shadow: 2rpx 2rpx 2rpx #666;
+}
+.time-box{
+  height: 32rpx;
+  width:100%;
+  margin:24rpx auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  clear: both
+}
+.time-box text{
+  font-family: 'UKIJ Esliye';
+  direction:rtl;
+  display: block;
+  color:#ccc;
+  height: 32rpx;
+  width:100%;
+  text-align: center;
+  font-size:28rpx;
+  line-height: 32rpx;
+  text-shadow: 2rpx 2rpx 2rpx #666;
+}
+.tree-box{
+  position: relative;
+  height: 128rpx;
+  width:100%;
+  margin-bottom: 16rpx;
+  box-sizing: border-box;
+  clear: both
+}
+.tree-box .one-box{
+  height: 128rpx;
+  width:33.333%;
+  display: inline-block;
+  align-items: center;
+  box-sizing: border-box;
+  clear: both
+}
+.right-text{
+}
+.tree-box .one-box text{
+  display: block;
+  margin:16rpx auto;
+  text-align: center;
+  color:white;
+  font-size:28rpx;
+  text-shadow: 2rpx 2rpx 2rpx #666;
+}
+.tree-box .center-box{
+  border-right: 1px rgba(120,120,120,0.6) solid;
+  border-left: 1px rgba(120,120,120,0.6) solid;
+}
+.tree-icon{
+  display: block;
+  margin:0 auto;
+  width: 80rpx; 
+  height: 70rpx;
+  padding:12rpx;
+  box-sizing: border-box;
+}
+.day-box{
+  position: relative;
+  height: 108rpx;
+  width:100%;
+  margin-top:4rpx;
+  background-color:rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  clear: both
+}
+.day-box .daylabel{
+  color: white;
+  font-size:32rpx;
+  line-height: 108rpx;
+  margin-left:16rpx;
+  float: left
+}
+.day-box .dayvalue{
+  color: white;
+  font-size:32rpx;
+  width: 160rpx;
+  line-height: 108rpx;
+  margin-right:16rpx;
+  float: right
+}
+.day-box .dayicon{
+  float: right;
+  width: 80rpx; 
+  height: 80rpx;
+  margin-top:14rpx;
+  margin-right:16rpx;
+  padding:2rpx;
+  box-sizing: border-box;
+}
+.aqi-box{
+  position: relative;
+  width:100%;
+  margin-top:16rpx;
+  padding-left: 16rpx;
+  padding-bottom: 10rpx;
+  background-color:rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  clear: both
+}
+.aqi-box image{
+  margin: 0rpx 16rpx;
+  padding: 0rpx 30rpx;
+  width: 30%;
+  height: 140rpx;
+  box-sizing: border-box
+}
+.paneltitle{
+  display: block;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size:34rpx;
+  line-height: 88rpx;
+  font-family: 'UKIJ Esliye';
+  box-sizing: border-box;
+}
+.aqitext{
+  display: block;
+  font-family: 'UKIJ Esliye';
+  text-align: left;
+  color: white;
+  width: 65%;
+  float: left;
+  font-size:28rpx;
+  line-height: 64rpx;
+  margin:6rpx 0;
+  padding: 0 10rpx;
+  background-color: rgba(120,120,120,0.2);
+  box-sizing: border-box;
+  border-radius: 6rpx;
+}
+.advice-box{
+  position: relative;
+  width:100%;
+  padding-left: 10rpx;
+  padding-bottom: 10rpx;
+  margin-top:16rpx;
+  background-color:rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  clear: both
+}
+.adviceview{
+  display: block;
+  width: 48%;
+  min-height: 96rpx;
+  float: left;
+  margin:6rpx 6rpx;
+  box-sizing: border-box;
+}
+.adviceicon{
+  display: block;
+  width: 16%;
+  height: 86rpx;
+  float: left;
+  padding:16rpx 8rpx;
+  background-color: rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  border-radius: 10rpx 0 0 10rpx;
+}
+.advicetext{
+  display: block;
+  text-align: left;
+  color: white;
+  width: 84%;
+  min-height: 86rpx;
+  float: left;
+  font-size:28rpx;
+  line-height: 48rpx;
+  padding: 0 10rpx;
+  background-color: rgba(120,120,120,0.2);
+  box-sizing: border-box;
+  border-radius: 10rpx 0 0 10rpx;
+}
+.advicetextxl{
+  display: block;
+  text-align: left;
+  color: white;
+  width: 187%;
+  margin-left:-400rpx;
+  min-height: 96rpx;
+  float: left;
+  font-size:28rpx;
+  line-height: 48rpx;
+  padding: 0 10rpx;
+  background-color: rgba(120,120,120,0.2);
+  box-sizing: border-box;
+  border-radius: 10rpx 0 0 10rpx;
+}
+.holiday-box{
+  position: relative;
+  width:100%;
+  padding-right: 16rpx;
+  padding-left: 16rpx;
+  margin-top:16rpx;
+  padding-bottom: 10rpx;
+  background-color:rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  clear: both
+}
+.holidaytext{
+  display: block;
+  font-family: 'UKIJ Esliye';
+  text-align: left;
+  color: white;
+  width: 100%;
+  float: left;
+  font-size:28rpx;
+  line-height: 72rpx;
+  margin:4rpx 0;
+  padding: 0 10rpx;
+  background-color: rgba(120,120,120,0.2);
+  box-sizing: border-box;
+  border-radius: 6rpx;
+}
