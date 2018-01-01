@@ -2,8 +2,8 @@
 自己捉摸着玩的微信天气小程序<br/>
 先来个截屏<br/>
 ![Alt text](https://github.com/bodekjan/wechat-weather/blob/master/screenshot/1.jpg)
-![Alt text](https://github.com/bodekjan/wechat-weather/blob/master/screenshot/2.jpg)
-![Alt text](https://github.com/bodekjan/wechat-weather/blob/master/screenshot/3.jpg)
+![Alt text](https://github.com/bodekjan/wechat-weather/blob/master/screenshot/2.JPG)
+![Alt text](https://github.com/bodekjan/wechat-weather/blob/master/screenshot/3.JGP)
 <br/>
 主要特性：<br/>
 自动定位到当前城市，显示当前温度等信息<br/>
